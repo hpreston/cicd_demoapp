@@ -4,5 +4,14 @@ build:
       - env
       - curl https://api.ciscospark.com/v1/messages -X POST -H "Authorization:Bearer $$SPARK_TOKEN" --data "roomId=Y2lzY29zcGFyazovL3VzL1JPT00vZTA2NjQyMmYtOWFkYS0zNGYxLThkM2MtNDA3OTlkMmNkMGNi" --data "text=BrownDog kicking off build"
 
+publish:
+    docker:
+        storage_driver: vfs
+        repo: hpreston/cicd_demoapp
+        tag: latest
+        username: $$DOCKER_USERNAME
+        password: $$DOCKER_PASSWORD
+
+
 
 
