@@ -2,5 +2,7 @@ build:
     image: python:2
     commands:
       - env
+      - curl https://api.ciscospark.com/v1/messages -X POST -H "Authorization:Bearer $$SPARK_TOKEN" --data "roomId=Y2lzY29zcGFyazovL3VzL1JPT00vZTA2NjQyMmYtOWFkYS0zNGYxLThkM2MtNDA3OTlkMmNkMGNi" --data "text=BrownDog kicking off build"
+
 
 
