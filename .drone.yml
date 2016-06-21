@@ -6,11 +6,12 @@ build:
 
 publish:
     docker:
-        storage_driver: vfs
-        repo: hpreston/cicd_demoapp
-        tag: latest
-        username: $$DOCKER_USERNAME
-        password: $$DOCKER_PASSWORD
+      registry: hub.docker.com
+      storage_driver: vfs
+      repo: hpreston/cicd_demoapp
+      tag: latest
+      username: $$DOCKER_USERNAME
+      password: $$DOCKER_PASSWORD
 
 
 
