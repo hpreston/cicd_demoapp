@@ -6,7 +6,6 @@ build:
 
 publish:
     docker:
-      registry: hub.docker.com
       storage_driver: vfs
       repo: hpreston/cicd_demoapp
       tag: latest
