@@ -4,3 +4,10 @@ build:
     - env
     - curl https://api.ciscospark.com/v1/messages -X POST -H "Authorization:Bearer $$SPARK_TOKEN" --data "roomId=$$SPARK_ROOM" --data "text=Drone kicking off build $CI_BUILD_NUMBER"
 
+publish:
+  docker:
+    repo: hpreston/cicd_demoapp
+    tag: latest
+    username: $$DOCKER_USERNAME
+    password: $$DOCKER_PASSWORD
+    email: $$DOCKER_EMAIL
