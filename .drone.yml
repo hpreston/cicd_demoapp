@@ -12,9 +12,7 @@ publish:
       username: $$DOCKER_USERNAME
       password: $$DOCKER_PASSWORD
       email: $$DOCKER_EMAIL
-      build_args:
-        - dns=8.8.8.8
-
+      
 
 
 
