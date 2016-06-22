@@ -14,3 +14,4 @@ RUN pip install --requirement /app/requirements.txt
 
 CMD ["python", "demoapp.py"]
 
+
