@@ -13,4 +13,3 @@ publish:
       password: $$DOCKER_PASSWORD
       email: $$DOCKER_EMAIL
 
-
