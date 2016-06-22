@@ -2,7 +2,7 @@
 ## Python Dockerfile
 ##
 ## Pull base image.
-FROM python:2
+FROM python:2-alpine
 MAINTAINER Hank Preston "hapresto@cisco.com"
 EXPOSE 5000
 
