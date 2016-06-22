@@ -22,3 +22,26 @@ deploy:
       password: $$MANTL_PASSWORD
     urls:
       - https://$$MANTL_CONTROL/marathon/v2/apps/class/hank/restart?force=true
+
+notify:
+  webhook:
+    debug: true
+    image: plugins/drone-webhook
+    when:
+      success: true
+      failure: true
+    method: POST
+    header:
+      Content-type: application/json; charset=utf-8
+      Authorization: Bearer $$SPARK_TOKEN
+    urls:
+      - https://api.ciscospark.com/v1/messages
+    template: |
+      {
+        "roomId": "$$SPARK_ROOM",
+        {{#success build.status}}
+        "text": "Drone confirms {{repo.full_name}} build {{build.number}} completed successfully.\nhttp://github.com/{{repo.full_name}}/commit/{{build.commit}}."
+        {{else}}
+        "text": "Drone blames {{build.author}} for breaking build {{build.number}}.\nhttp://github.com/{{repo.full_name}}/commit/{{build.commit}}."
+        {{/success}}
+      }
