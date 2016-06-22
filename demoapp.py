@@ -5,11 +5,10 @@ from flask_restful import Resource, Api, reqparse
 app = Flask(__name__)
 app = Flask(__name__)
 api = Api(app)
-# api = swagger.docs(Api(app), apiVersion='0.1')
 
 class HelloWorld(Resource):
     def get(self):
-        text = "Hello World!!!"
+        text = "Hello World!!"
         return text
 
 
