@@ -15,13 +15,13 @@ publish:
 deploy:
   webhook:
     image: plugins/drone-webhook
-      skip_verify: true
-      method: POST
-      auth:
-        username: $$MANTL_USERNAME
-        password: $$MANTL_PASSWORD
-      urls:
-        - https://$$MANTL_CONTROL/marathon/v2/apps/class/hank/restart?force=true
+    skip_verify: true
+    method: POST
+    auth:
+      username: $$MANTL_USERNAME
+      password: $$MANTL_PASSWORD
+    urls:
+      - https://$$MANTL_CONTROL/marathon/v2/apps/class/hank/restart?force=true
 
 notify:
   webhook:
