@@ -27,3 +27,9 @@ deploy:
             password: $$MANTL_PASSWORD
         urls:
             - https://$$MANTL_CONTROL/marathon/v2/apps/class/$$DOCKER_USERNAME/restart?force=true
+
+notify:
+    spark:
+        image: hpreston/drone-spark
+        auth_token: $$SPARK_TOKEN
+        roomId: $$SPARK_ROOM
