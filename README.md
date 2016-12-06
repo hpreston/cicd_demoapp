@@ -1,6 +1,6 @@
 # Demo App for CICD Experimentation
 
-This is a sample application used as part of the [CICD Learning Lab](https://github.com/hpreston/cicd_learning_lab).  This lab walks the user through setting up a full CICD pipeline that will monitor a GitHub repo for changes and build a container based on the changes, publish it to Docker Hub, update a _Production_ app deployment and leverage Cisco Spark to update on status.
+This is a sample application used as part of the [CICD Learning Lab](https://github.com/imapex-training/cicd_learning_lab).  This lab walks the user through setting up a full CICD pipeline that will monitor a GitHub repo for changes and build a container based on the changes, publish it to Docker Hub, update a _Production_ app deployment and leverage Cisco Spark to update on status.
 
 The application itself is a very basic "Hello World" application written in Python and leveraging Flask as an interface.
 
