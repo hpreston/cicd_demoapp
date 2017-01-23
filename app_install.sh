@@ -19,7 +19,6 @@ echo "What is the Lab Application Domain?  "
 read mantl_domain
 echo
 
-
 #export MANTL_CONTROL="$control_address"
 #export MANTL_USER="$mantl_user"
 #export MANTL_PASSWORD="$mantl_password"
